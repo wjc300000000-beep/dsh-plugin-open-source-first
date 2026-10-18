@@ -1,0 +1,13 @@
+# dsh-plugin-open-source-first bundle patch.
+# Inserts the section-registering row into the profile's layer stack.
+#
+# order 50 sits after the deployment persona section (order 0) and before the
+# first-party policy/tool guidance (PLAN_POLICY 500, TEAM_POLICY 600, tools 1000+)
+# in DSH 0.2.1-rc.2. Override `order` per profile if another plugin claims 50;
+# equal orders are tie-broken by section name.
+- insert:
+    - id: open-source-first
+      name: 'dsh-plugin-open-source-first'
+      config:
+        enabled: true
+        order: 50

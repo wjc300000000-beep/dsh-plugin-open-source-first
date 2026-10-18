@@ -1,0 +1,34 @@
+{
+  "name": "dsh-plugin-open-source-first",
+  "version": "0.1.0",
+  "description": "DSH plugin: injects an auditable open-source-first workflow (search → three-tier evaluation → build) as a high-priority system-prompt section at order 50.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "system-prompt",
+    "open-source",
+    "reuse-first",
+    "rules"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
